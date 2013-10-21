@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class AppDelegate;
 @interface ViewController : UIViewController
-
+-(IBAction)fbAuthdentication;
 @end

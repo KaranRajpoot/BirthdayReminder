@@ -19,6 +19,9 @@
 		B0912B841811F2A300AB3CED /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0912B821811F2A300AB3CED /* MainStoryboard_iPhone.storyboard */; };
 		B0912B871811F2A300AB3CED /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0912B851811F2A300AB3CED /* MainStoryboard_iPad.storyboard */; };
 		B0912B8A1811F2A300AB3CED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0912B891811F2A300AB3CED /* ViewController.m */; };
+		B0912B921811F30200AB3CED /* FBFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0912B911811F30200AB3CED /* FBFriendListViewController.m */; };
+		B0912B941811F36600AB3CED /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0912B931811F36600AB3CED /* FacebookSDK.framework */; };
+		B0912B971811F57B00AB3CED /* FBShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0912B961811F57B00AB3CED /* FBShareManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,11 @@
 		B0912B861811F2A300AB3CED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		B0912B881811F2A300AB3CED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B0912B891811F2A300AB3CED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0912B901811F30200AB3CED /* FBFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendListViewController.h; sourceTree = "<group>"; };
+		B0912B911811F30200AB3CED /* FBFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendListViewController.m; sourceTree = "<group>"; };
+		B0912B931811F36600AB3CED /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B0912B951811F57B00AB3CED /* FBShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShareManager.h; sourceTree = "<group>"; };
+		B0912B961811F57B00AB3CED /* FBShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShareManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0912B941811F36600AB3CED /* FacebookSDK.framework in Frameworks */,
 				B0912B6B1811F2A300AB3CED /* UIKit.framework in Frameworks */,
 				B0912B6D1811F2A300AB3CED /* Foundation.framework in Frameworks */,
 				B0912B6F1811F2A300AB3CED /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +67,7 @@
 		B0912B5E1811F2A300AB3CED = {
 			isa = PBXGroup;
 			children = (
+				B0912B931811F36600AB3CED /* FacebookSDK.framework */,
 				B0912B701811F2A300AB3CED /* BirthdayReminder */,
 				B0912B691811F2A300AB3CED /* Frameworks */,
 				B0912B681811F2A300AB3CED /* Products */,
@@ -91,6 +101,10 @@
 				B0912B851811F2A300AB3CED /* MainStoryboard_iPad.storyboard */,
 				B0912B881811F2A300AB3CED /* ViewController.h */,
 				B0912B891811F2A300AB3CED /* ViewController.m */,
+				B0912B901811F30200AB3CED /* FBFriendListViewController.h */,
+				B0912B911811F30200AB3CED /* FBFriendListViewController.m */,
+				B0912B951811F57B00AB3CED /* FBShareManager.h */,
+				B0912B961811F57B00AB3CED /* FBShareManager.m */,
 				B0912B711811F2A300AB3CED /* Supporting Files */,
 			);
 			path = BirthdayReminder;
@@ -180,6 +194,8 @@
 				B0912B771811F2A300AB3CED /* main.m in Sources */,
 				B0912B7B1811F2A300AB3CED /* AppDelegate.m in Sources */,
 				B0912B8A1811F2A300AB3CED /* ViewController.m in Sources */,
+				B0912B921811F30200AB3CED /* FBFriendListViewController.m in Sources */,
+				B0912B971811F57B00AB3CED /* FBShareManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +290,10 @@
 		B0912B8E1811F2A300AB3CED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BirthdayReminder/BirthdayReminder-Prefix.pch";
 				INFOPLIST_FILE = "BirthdayReminder/BirthdayReminder-Info.plist";
@@ -285,6 +305,10 @@
 		B0912B8F1811F2A300AB3CED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BirthdayReminder/BirthdayReminder-Prefix.pch";
 				INFOPLIST_FILE = "BirthdayReminder/BirthdayReminder-Info.plist";
